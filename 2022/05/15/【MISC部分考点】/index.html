@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZT①战队 || 欢迎来到ZT①战队的博客</title>
+    <title>ZT①战队 || 【CTF入门】Misc部分考点分析</title>
     <meta name="author" content="F1nAl_">
     <meta name="description" content="从zero到one（1） ">
     <meta name="keywords" content=" ">
@@ -149,75 +149,51 @@
                 </div>
 
                 <div id="main">
-                    
-<div id="archives">
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/5/15" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/5/15</div>
-                <a href="/2022/05/15/【MISC部分考点】/">
-                    <h3>【CTF入门】Misc部分考点分析</h3>
-                </a>
-                <div class="info">
-                    
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>【CTF入门】Misc部分考点分析 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/5/15
+        </span>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/5/15" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/5/15</div>
-                <a href="/2022/05/15/【CTF入门】MISC-图片隐写部分/">
-                    <h3>【CTF入门】MISC-图片隐写部分</h3>
-                </a>
-                <div class="info">
-                    
+        
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/5/15" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/5/15</div>
-                <a href="/2022/05/15/【遇到的几种编码】 /">
-                    <h3>【CTF入门】MISC-遇到的几种编码</h3>
-                </a>
-                <div class="info">
-                    
+        
+    </div>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/5/8" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/5/8</div>
-                <a href="/2022/05/08/“HELLO WORLD !”/">
-                    <h3>HELLO WORLD !</h3>
-                </a>
-                <div class="info">
-                    
+    <div class="content" v-pre>
+        <p>安全杂项简称misc：电子取证、隐写术、编码和解码、数据包分析、大数据统计、PS等等</p>
+<h1 id="Misc部分考点分析："><a href="#Misc部分考点分析：" class="headerlink" title="Misc部分考点分析："></a>Misc部分考点分析：</h1><h2 id="Word"><a href="#Word" class="headerlink" title="Word"></a>Word</h2><p>1.010打开直接发现flag<br><img src="https://img-blog.csdnimg.cn/9487c9343b8149c785a0a3f9ce1c1670.png" alt="在这里插入图片描述"></p>
+<p>2.本质是一个压缩包zip，里面可以隐藏图片或者txt<br>3.word显示隐藏文字内容，或者将flag的字体颜色设置成白色或其他与文件背景一致的颜色，或者写的很小在文件底部，甚至在图片的下面，也就是被图片覆盖住了<br>4.有时候也会在属性中藏有信息<br> <img src="https://img-blog.csdnimg.cn/fae457ddaff9483b881c2902ad4eddbc.png" alt="在这里插入图片描述"></p>
+<h2 id="图片隐写术"><a href="#图片隐写术" class="headerlink" title="图片隐写术"></a>图片隐写术</h2><p>1.图片查看备注或者详细信息<br>2.用010查看内容，有没有类似PK，RAR，txt，flag，key等信息<br>3.图片修改高度<br> <img src="https://img-blog.csdnimg.cn/9ae09529e6ce4a48a53e2697018f1143.png" alt="在这里插入图片描述"></p>
+<p>4.Stegsolve 可以看常规的图片隐写，发现LSB隐写等等。<br>5.binwalk或者foremost进行图片分离<br> <img src="https://img-blog.csdnimg.cn/ab47d29895e943f5bf59cd2ce3a9dea1.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/a3b6e136a4a94ecc8a6e7c7d33a91630.png" alt="在这里插入图片描述"></p>
+<p>6、PS分离图层，或者拼接图片<br> <img src="https://img-blog.csdnimg.cn/3162032b14c24849939f8ad276c0dc81.png" alt="在这里插入图片描述"></p>
+<ol start="7">
+<li>GIF动态分帧：将信息隐藏在动态图中，一闪而过，肉眼难以看到。可以用PS或者GIF分帧工具解题<br><img src="https://img-blog.csdnimg.cn/dc16ef1bf20044788bc1730402815fb8.png" alt="在这里插入图片描述"></li>
+</ol>
+<p>8.还有一些隐写术解法，包括：<br><em><strong>F5刷新隐写工具、Steghide隐写工具、Image Steganography隐写工具、Outguess隐写工具</strong></em></p>
+<h2 id="Mp3音频隐写术"><a href="#Mp3音频隐写术" class="headerlink" title="Mp3音频隐写术"></a>Mp3音频隐写术</h2><p>一般是看波形和频谱（使用audacity软件）<br>1.看波形是一个摩斯密码，解码得到flag<br> <img src="https://img-blog.csdnimg.cn/cc7368470ab94c4f9e0c647a43002790.png" alt="在这里插入图片描述"></p>
+<p>2.看频谱得flag<br>3.MP3Stego软件进行音频隐写，在压缩过程中，这个软件会将信息隐藏在MP3文件中，数据首先被压缩、加密，然后隐藏在mp3比特流中。可以百度查看本工具使用方法</p>
+<h2 id="数据包（流量包）分析"><a href="#数据包（流量包）分析" class="headerlink" title="数据包（流量包）分析"></a>数据包（流量包）分析</h2><p>数据包后缀为.pcapng,使用wireshark抓包软件查看<br>主要考点：<br>1.Wireshark过滤规则：如提示ping，想到是ICMP协议<br>2.网络协议分析（HTTP、SMTP、FTP、TCP），追踪流<br>3.漏洞利用分析（SQL注入）文件提取<br>4.wifi包破解，可以使用aircrack-ng命令</p>
+<p>作者  6AG1e<br>2021 年 05月 15日    </p>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
     
 </div>
-
                      
 <footer id="footer">
     <div class="footer-wrap">
@@ -280,6 +256,21 @@
             }
         }
     })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
 </script>
 
 </body>
