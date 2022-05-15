@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZT①战队 || 欢迎来到ZT①战队的博客</title>
+    <title>ZT①战队 || 【CTF入门】MISC-图片隐写部分</title>
     <meta name="author" content="F1nAl_">
     <meta name="description" content="从zero到one（1） ">
     <meta name="keywords" content=" ">
@@ -149,43 +149,73 @@
                 </div>
 
                 <div id="main">
-                    
-<div id="archives">
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/5/15" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/5/15</div>
-                <a href="/2022/05/15/【CTF入门】MISC-图片隐写部分/">
-                    <h3>【CTF入门】MISC-图片隐写部分</h3>
-                </a>
-                <div class="info">
-                    
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>【CTF入门】MISC-图片隐写部分 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/5/15
+        </span>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2022/5/8" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2022/5/8</div>
-                <a href="/2022/05/08/“HELLO WORLD !”/">
-                    <h3>HELLO WORLD !</h3>
-                </a>
-                <div class="info">
-                    
+        
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <blockquote>
+<p>图片隐写是通过一些方法或工具将想要传递的信息隐藏起来，不让除计划的接收者以外的任何人知道信息的传递事件的一门技巧与科学。</p>
+</blockquote>
+<hr>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p><code> 一般来说，刚开始学习时候需要认识到相关工具，而在做相关题目时通过不断的摸索就能熟练工具的使用方法。</code></p>
+<p>部分常用工具：</p>
+<pre><code>010Editor
+
+stegsolve
+
+winhex
+
+binwalk
+
+foremost
+    
+</code></pre>
+<p>工具: <a target="_blank" rel="noopener" href="https://www.ctftools.com/down/">https://www.ctftools.com/down/</a></p>
+<hr>
+<h1 id="常见题目类型"><a href="#常见题目类型" class="headerlink" title="常见题目类型"></a>常见题目类型</h1><p><code>以下是一些比较常见的题目类型</code></p>
+<h2 id="一、LSB"><a href="#一、LSB" class="headerlink" title="一、LSB"></a>一、LSB</h2><blockquote>
+<p>LSB也就是最低有效位 (Least Significant Bit)</p>
+</blockquote>
+<p>图片中的像数一般是由三种颜色组成，即三原色，由这三种原色可以组成其他各种颜色。LSB隐写就是将需要隐藏的信息转二进制后，再将载体图片里的像素点的RGB值转二进制，然后将我们需要隐藏的信息（二进制后）逐一替换转换后的RGB值的最后一位，最后再将转换后的RGB值再转为图片输出，而人眼并不能直接看出，从而达到隐藏信息的作用。</p>
+<p>==一般只针对png或者bmp格式的图片，可以使用stegsolve解题==</p>
+<h2 id="二、改写图片高度"><a href="#二、改写图片高度" class="headerlink" title="二、改写图片高度"></a>二、改写图片高度</h2><p>示例：<img src="https://img-blog.csdnimg.cn/13eb7ef2e4954cc7be5b3d5ff7bf4b0f.png#pic_center" alt="89 50 4E 47 是PNG图片的头文件格式"></p>
+<blockquote>
+<p>89 50 4E 47 0D 0A 1A 0A                     //文件头<br>00 00 00 0D（即为十进制的13）        //代表数据块的长度为13<br>49 48 44 52（即为ASCII码的IHDR） //IHDR的标识<br>00 00 05 CE                                       //图片的宽度<br>00 00 02 EE                                        //图片的高度</p>
+</blockquote>
+<p>有些题目可能会改写所给图片的高度，将信息隐藏在图片未展示的地方，使用010、winhex等都可以修改此处，通常隐藏的是二维码或者ascii码等，而并不是直接给flag。</p>
+<h2 id="三、GIF动态分帧"><a href="#三、GIF动态分帧" class="headerlink" title="三、GIF动态分帧"></a>三、GIF动态分帧</h2><blockquote>
+<p>GIF图片隐藏的信息一般在某一帧数，而gif图片又在不断的动，不易截图，但可以通过stegsolve逐帧看，从而找到那一帧图片</p>
+</blockquote>
+<p>例如：<br><img src="https://img-blog.csdnimg.cn/ae7bbe7e2a23484aa97f0cbb2035780a.png#pic_center" alt="gif图片"><br>这是通过stegslove得到的，原图是一张GIF图片，其中一帧就是隐藏的本张图片。当然，它隐藏的一般也不会是flag，同样可能是二维码或者ascii码等。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>解MISC时会涉及到各种脑洞，各种花式技巧，主要考察选手的快速理解、学习能力以及日常知识积累的广度、深度。</p>
+<p>作者  A5D<br>2021 年 05月 15日    </p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
     
 </div>
-
                      
 <footer id="footer">
     <div class="footer-wrap">
@@ -248,6 +278,21 @@
             }
         }
     })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
 </script>
 
 </body>
