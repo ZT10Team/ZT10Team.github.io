@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZT①战队 || 【CTF入门】常用工具的环境搭建（Python篇）</title>
+    <meta name="author" content="F1nAl_">
+    <meta name="description" content="从zero到one（1） ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/../avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ZT①战队</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>ZT①战队</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>【CTF入门】常用工具的环境搭建（Python篇） </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/5/16
+        </span>
+
+        
+
+        
+    </div>
+
+    <div class="content" v-pre>
+        <h2 id="1-Python篇"><a href="#1-Python篇" class="headerlink" title="1. Python篇"></a>1. Python篇</h2><p>​       对于ctf中常用的解密方法有很多，而脚本编写则绕不开python这一工具。但对于大多新手python环境的构建是一项令人头疼的事情，要不断的去网上找资源，去比对网上的电脑和自己电脑的区别，而本篇则是笔者在安装python时的经验。</p>
+<p>​     另：现阶段已经大部分在使用python 3了，但做一些老题目时可能会遇到从网上down下来的代码放入python 3中跑不起来的情况（毕竟python 2的版本也才2020年结束更新）所以在这里python 2的安装也会介绍。 </p>
+<h3 id="Python-3"><a href="#Python-3" class="headerlink" title="Python 3"></a>Python 3</h3><p>对于python的下载直接去网上搜索<a href="(https://www.python.org/)">python 官网</a>进行下载。</p>
+<p>由于官网的页面形式改变所以只能靠读者自己下载了。在这里我只对当前的页面进行讨论。<br><img src="https://img-blog.csdnimg.cn/b2b0b34242db4689a5d4a99dd1e35fe6.png#pic_center" alt="1"></p>
+<p>选择download的releases 进入下一个页面，滑动滚轮到</p>
+<p><img src="https://img-blog.csdnimg.cn/a35dcc345f3c44e7923c492d59e6514d.png#pic_center" alt="2"></p>
+<p>去选择自己想要的版本。这里推荐python 3 的最新版本就可以了。</p>
+<p><img src="https://img-blog.csdnimg.cn/d160a27808634fb1880cdd617c495fc3.png#pic_center" alt="3"><br>在这里选择合适的版本进行下载。</p>
+<p>（在这里下载可能会有点慢，读者可以考虑科学上网，当然没有可以科学上网的方式笔者这里推荐一个软件 steam++对于打游戏的应该挺熟悉的但它还可加载国外一些网页的读取速度，比如/github之类的。下载方式呢直接去B站搜）。</p>
+<p>下载好后安装到这个页面</p>
+<p><img src="https://img-blog.csdnimg.cn/d3a05f7de57846509050aa5ce2c61729.png#pic_center" alt="4"><br>在这里 记得选中Add Python 3.8 to PATH 这个选项，他会自行环境变量安装，不用手动安装（感动，能够自行安装环境变量的软件是个好软件！！）。</p>
+<p>同时选中自定义安装也就是Customize installation（作为学习计算机的那肯定逼格要高点啊）。</p>
+<p><img src="https://img-blog.csdnimg.cn/5c60fe9c36ca4f7c87eb1ac9a4fdf572.png#pic_center" alt="5"><br>在这里全选就可以了，尤其是pip这个选项，他作为一个工具包在日后的学习还是很重要的。</p>
+<p>NEXT 继续</p>
+<p><img src="https://img-blog.csdnimg.cn/6084278598884041a2150a392163a1bd.png#pic_center" alt="6"><br>前面勾选中第四个一定勾选（会添加到环境变量）</p>
+<p>这里需要更改下安装地址Customize install location </p>
+<p>推荐安装在C盘这样后续会方便很多，当然C盘爆红了的话安装在其他盘也没问题。但在这里需要注意的是将文件安装在表层（这样会避免日后很多麻烦）比如笔者这个应该跟改为C:\python 就可以了。同时命名文件的时候应该避免出现中文，特殊字符，空格之类的。</p>
+<p>继续安装。</p>
+<p><img src="https://img-blog.csdnimg.cn/fd26f65cbaff458d84bcb9c1d0dd4692.png#pic_center" alt="7"><br>这里会提示安装成功 Setup was successful。</p>
+<p>同时下面会出现一行 Disable path length limit 提示字样。</p>
+<p>点击这个地方（禁用文件深度最大限制，之后可能会对第三方库的时候会报错，那时候就要搞注册表之类的了很麻烦）</p>
+<p>至此Python的安装就完成了。</p>
+<p>当想要验证是否安装完成那就要去打开命令提示符（在windows的搜索中搜索cmd）</p>
+<p>输入指令 python –version</p>
+<pre><code>C:\Users\用户名&gt;python --version
+Python 3.10.4
+</code></pre>
+<p>会出现python版本。</p>
+<p>同时对于上文中的pip验证也是利用 pip –version </p>
+<pre><code>C:\Users\用户名&gt;pip --version
+pip 22.0.4 from C:\文件地址 (python 3.10)
+</code></pre>
+<h3 id="Python-2"><a href="#Python-2" class="headerlink" title="Python 2"></a>Python 2</h3><p>对于python 2 来说安装步骤相较于python 3麻烦了很多，而且可能还会遇到环境变量被自己误删了的情况（别问我怎么知道的）所以我尽量简单的陈述安装过程。</p>
+<p>安装同样也要去官网安装</p>
+<p><img src="https://img-blog.csdnimg.cn/858cbde1c6c64cdda538f993d2e6a592.png#pic_center" alt="8"></p>
+<p>选择download的releases 进入下一个页面，滑动滚轮到</p>
+<p><img src="https://img-blog.csdnimg.cn/1fdb23450c684af88135c06441433aff.png#pic_center" alt="9"></p>
+<p>在这里的话选择 python 2.7.18（因为这是python 2 的最后一个版本）</p>
+<p><img src="https://img-blog.csdnimg.cn/ffea00cc5d77426b92e9400f49873353.png#pic_center" alt="10"><br>选择自己合适的版本（这里因为我的电脑是win 10 64位）所以选择的是这个。</p>
+<p>打开安装包</p>
+<p><img src="https://img-blog.csdnimg.cn/ea7b996794244bdfb4e64284e1266c44.png#pic_center" alt="11"></p>
+<p>这里的话两个随便选问题都不大。Next</p>
+<p><img src="https://img-blog.csdnimg.cn/2a1da611f7c7473b836735cfe1fc44a4.png#pic_center" alt="12"></p>
+<p>这里可以更改安装包位置，同时建议安装再C盘，以及将其安装再文件表层，例如我这样的安装方式。Next</p>
+<p><img src="https://img-blog.csdnimg.cn/7c69415b53f143f6902e9568e251b2e6.png#pic_center" alt="13"></p>
+<p>Next。</p>
+<p>然后就安装完成，但在这地方还需要去添加Python的环境变量。</p>
+<p>在windows的搜索中搜索编辑系统环境变量。打开后点击环境变量</p>
+<p><img src="https://img-blog.csdnimg.cn/83184f58378547f18d95fa077de37e16.png#pic_center" alt="14"></p>
+<p>找到PATH</p>
+<p><img src="https://img-blog.csdnimg.cn/d2bb65302bb54b458a647af70a6a7ceb.png#pic_center" alt="15"></p>
+<p>双击进入PATH的编辑环境</p>
+<p><img src="https://img-blog.csdnimg.cn/85ca95468d5d4d02b3344d07d5e9abde.png#pic_center" alt="16"></p>
+<p>去新建输入python的安装地址（当然也可以浏览到python的文件地址，笔者这里就只是放在了E盘中的python中所以直接浏览到这个文件加选中就行）</p>
+<p>另选新建输入python安装文件的子级文件Scripts可以了（同样可以选择新建的时候浏览）。</p>
+<p><img src="https://img-blog.csdnimg.cn/c865075c8b98473fa3fc3b672bcf7835.png#pic_center" alt="18"></p>
+<p>当然可能会出现这样的提示，这里和上文的没太大区别，在这里只需要去手动输入自己安装的python文件地址，同时再每一个环境变量前后都要加 ;  就可以了。但要注意这里是添加而不是替换。</p>
+<p>当然问题来了，如果不小心删除了系统原来的环境地址怎么办</p>
+<p>记得千万别重启然后参考这个<a target="_blank" rel="noopener" href="https://blog.csdn.net/Monuomeng/article/details/114142919">老哥的做法</a>。</p>
+<p>我这里的方法是重新添加PATH这个变量 并输入</p>
+<pre><code>%SystemRoot%\system32
+%SystemRoot%
+</code></pre>
+<p>这两个变量。然后再尝试进行python地址的输入。</p>
+<p>python 2 的验证如同 python 3 的验证一样</p>
+<p>输入指令 python –version</p>
+<pre><code>C:\Users\用户名&gt;python --version
+Python 3.10.4
+</code></pre>
+<p>会出现python版本。</p>
+<p>同时对于上文中的pip验证也是利用 pip –version </p>
+<pre><code>C:\Users\用户名&gt;pip --version
+pip 22.0.4 from C:\文件地址 (python 3.10)
+</code></pre>
+<p> 至此 python 2 的安装就完成了。</p>
+<p>作者：Fu_N<br>时间：2022 年 5 月 16 日</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2022 ZT①战队
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @F1nAl_
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>
