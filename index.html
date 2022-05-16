@@ -215,21 +215,21 @@
 <h2 id="CTF-的类型"><a href="#CTF-的类型" class="headerlink" title="CTF 的类型"></a>CTF 的类型</h2><p>CTF 题目类型一般分为 Web 渗透、RE 逆向、Misc 杂项、PWN 二进制漏洞利用、Crypto 密码破译，有志于渗透测试的同学一开始建议从 Web 渗透的题目开始，辅以 Misc 杂项和 Crypto 密码学。</p>
 <p>CTF 主要分为两种模式，一是解题模式。对于 Web 安全来说，会要求你入侵网站或者靶机，攻击成功后系统会显示flag或者在某个目录 文件 数据库寻找 Flag，提交到答题系统得分。逆向工程题目一般形式是破解注册机、动态调试、dump 内存等等。这些题目可以百度或谷歌别人的解题报告（ 关键字：CTF writeup）来认识一下。</p>
 <p>这种模式的缺点是类似于“应试教育”，当前的趋势是注重出题难、出题偏，没有考虑实际，就跟奥数似的。而且这种模式只有攻击，却没有防守，而在企业中工作更多的还是考虑如何防护的问题，这个时候 AWD 攻防赛模式就应运而生了。</p>
-<p><img src="https://img-blog.csdnimg.cn/1d8ec5bdccd3445780c12b74b8e0442b.gif#pic_center" alt="刺激"><br>二是攻防赛，也叫 AWD(Attack With Defense，攻防兼备)模式。你需要在一场比赛里要扮演攻击方和防守方，攻者得分，失守者会被扣分。也就是说，攻击别人的靶机可以获取 Flag 分数时，别人会被扣分，同时你也要保护自己的主机不被别人得分，以防扣分。</p>
+<p><img src="https://img-blog.csdnimg.cn/1d8ec5bdccd3445780c12b74b8e0442b.gif#pic_center" alt="ciji"><br>二是攻防赛，也叫 AWD(Attack With Defense，攻防兼备)模式。你需要在一场比赛里要扮演攻击方和防守方，攻者得分，失守者会被扣分。也就是说，攻击别人的靶机可以获取 Flag 分数时，别人会被扣分，同时你也要保护自己的主机不被别人得分，以防扣分。</p>
 <p>这种模式非常激烈，准备要非常充分，手上要有充足的防守方案和 EXP 攻击脚本。这种比赛不用慌，多打多学多积累就好了。</p>
 <p><strong>CTF 里面也有一血之说，谁第一个交 Flag 能获得分数加成，所以说手快也很重要。不过一般来说是没有别的大佬手快的。</strong></p>
 <p><img src="https://img-blog.csdnimg.cn/4621c6e358fb4cb48cd952dab5c1e142.png#pic_center" alt="first"></p>
 <h2 id="CTF-和现实渗透的对比"><a href="#CTF-和现实渗透的对比" class="headerlink" title="CTF 和现实渗透的对比"></a>CTF 和现实渗透的对比</h2><p>现实的渗透测试会有非常完整的流程，从信息收集、漏洞探测开始，再逐项攻击，很多时候会一无所获。相比之下，CTF 的目标会比较明确，中等难度以下的题目一般都会在题目描述中提示漏洞的发生处，没有提示的话检测点也不会很多，一个个筛查就可以了。</p>
 <p>其次，有很多 CTF 题目会有点脱离现实渗透，套路、脑洞比较多，有的知识点并不实用……怎么说呢？</p>
 <p>有的时候出题人为了出点新题会把题目设置得脑洞要特别大才能做出来，Misc 安全杂项更是这种题的重灾区。做这种题其实对现实渗透没啥帮助，比如说这道密码题，第一次见的时候头大得一笔，各位先猜猜看是啥：</p>
-<p><img src="https://img-blog.csdnimg.cn/42fe8a0fb7a34bf4828a86da43b91a9b.png#pic_center" alt="佛"><br><strong>我反正我是麻了…</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/42fe8a0fb7a34bf4828a86da43b91a9b.png#pic_center" alt="fo"><br><strong>我反正我是麻了…</strong></p>
 <p>做多了 CTF 的同学应该知道，这是「与佛论禅」密码加密，第一次做到谁想出来……</p>
-<p><img src="https://img-blog.csdnimg.cn/36f4f8cc91bc48febc773dda38f0468a.png#pic_center" alt="佛曰"><br>类似这种摸不着头脑、要用特别奇怪的姿势或套路做题的题目也屡见不鲜。<br><strong>但是misc吸引人的地方就是：<del>越做越好玩！</del>(bushi!)</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/36f4f8cc91bc48febc773dda38f0468a.png#pic_center" alt="foyue"><br>类似这种摸不着头脑、要用特别奇怪的姿势或套路做题的题目也屡见不鲜。<br><strong>但是misc吸引人的地方就是：<del>越做越好玩！</del>(bushi!)</strong></p>
 <p>因此较为简单、脑洞略大的 CTF 题仅作扩充知识面就好了。话虽如此，现在 CTF 大赛都已经往实战的方向走了，高水准的 CTF 题目很多都会模拟真实的网站，让你更加有真实渗透的代入感，渗透手法也更加贴近实战。国内比较良心的 CTF 有 DDCTF、安恒杯月赛 CTF、iscc 等等。</p>
 <p>关于 CTF 赛事的信息可以关注 XCTF 社区或 CTFtime 整理的赛事链接。虽然非常可能在比赛里打不过各位大佬，但是划划水，学习学习知识也是非常不错滴。</p>
 <p><img src="https://img-blog.csdnimg.cn/f293d61c625b431f9d3abe8a6eb39b8b.jpeg#pic_center" alt="cai"></p>
 <h2 id="WP是什么东东，有什么用？"><a href="#WP是什么东东，有什么用？" class="headerlink" title="WP是什么东东，有什么用？"></a>WP是什么东东，有什么用？</h2><p>WP是writeup的简称，本意是指详细写的意思。我们通常所说的writeup指的是⼀个题⽬的解。 ⽐赛结束后，通常主办⽅会要求排名靠前的提交writeup，看你是怎么做的。这不仅是为了证明题是你做的，⽽且由于ctf题⽬通常⼀题都是有n种解法的，这样做也可以因此扩展其他选⼿的知识。当然，也能够帮你记住一些解题方法和思路，忘了就看看，超有用！！！</p>
-<p>如果不记WP，你就会<br><img src="https://img-blog.csdnimg.cn/7360dabcb37a405393ddb9b4b763a414.jpeg#pic_center" alt="后悔"></p>
+<p>如果不记WP，你就会<br><img src="https://img-blog.csdnimg.cn/7360dabcb37a405393ddb9b4b763a414.jpeg#pic_center" alt="hui"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我搜集了一些入门比较可以的 CTF 靶场，想了想，下次再发吧。</p>
 <p>新手入门的话，在靶场慢慢刷题，对于不会的题目直接百度或者谷歌，都会有很多解题报告，遇到不会的知识点也要善于使用搜索引擎。</p>
 <p>作者 F1nAl_<br>2021 年 05月 16日</p>
