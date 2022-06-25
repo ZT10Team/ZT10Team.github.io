@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>疫帮跑</title>
+<link rel="shortcut icon" href="images/icon_logo.png">
+<link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="top">
+  <div id="above">
+    <div id="Logo"><a href="index.html"><img src="images/logo.png" width="180" height="50"></a></div>
+    <div id="search">
+      <label for="textfield"></label>
+      <input name="textfield" type="text" id="textfield" value="  搜索" maxlength="15">
+    </div>
+    <div id="login"><a href="login.html">注册账号</a></div>
+  </div>
+</div>
+ <!-- 导航条代码 开始 -->
+ <div class="nav">
+   <ul class="list">
+     <li><a href="index.html">首页</a></li>
+     <li><a href="#">多媒体中心 <img src="images/down.svg" alt="" width="12" height="12"></a>
+       <div class="down"> <a href="news.html"> 新闻中心</a> <a href="videos.html"> 视频中心</div>
+     </li>
+     <li><a href="donation.html">在线捐赠</a></li>
+     <li><a href="login.html">注册/登录</a><a href="about.html"></a></li>
+   </ul>
+ </div>
+ <!-- 导航条代码 结束 -->
+
+<div id="im01"><img src="images/world.jpg" width="980" height="240"></div>
+<div id="article1">
+<table width="979" border="0">
+  <tr>
+    <td width="297" height="376" align="center"><img src="images/article12.jpg" width="224" height="294"></td>
+    <td width="672" align="center"><table width="88%" border="0">
+      <tr>
+        <td width="400"><span class="ayahei">在线捐赠
+
+        </span><br>
+        疫帮跑项目为公益项目，日常的网站维护以及志愿者招募需要一定的费用，如果您能捐献，我们将感激不尽！我们项目感谢您的支持！</td>、
+        <td width="192"><span class="ayahei">捐赠名单
+
+        </span><br>
+    <hr/>
+    <div id="demo" style="OVERFLOW: hidden; height: 100px;">
+        <div id="marquePic1">
+            朱老师 500元 支付宝<br/>
+            顾先生 300元 微信<br/>
+            露露小姐 200元 支付宝<br/>
+            沈同学 300元 微信<br/>
+            雪儿女士 200元 微信<br/>
+            坤坤先生 300元 支付宝<br/>
+            可爱的晓莹 300元 微信<br/>
+            匿名 200元 支付宝<br/>
+            Fun师傅 100元 支付宝<br/>
+            Jack Chen 500元 微信<br/>
+            老六 100元 微信
+        </div>
+        <div id="marquePic2" valign="top">
+        </div>
+    </div>
+    </td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+</div>
+<div id="article1">
+<table width="979" border="0">
+  <tr>
+    <td width="297" height="376" align="center"><img src="images/juan.png" width="224" height="294"></td>
+    <td width="672" align="center"><table width="88%" border="0">
+      <tr>
+        <td><br>
+        您可通过左侧的二维码在线捐助，同时也可以选择线下捐赠的方式。如果想要滚动展示，务必留下您的姓名。再次感谢您的爱心！
+</td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+</div>
+<div id="music"><table width="100%" border="0">
+  <tr>
+    <td width="38%" height="55" align="center"><audio src="media/music.mp3" controls autoplay></audio></td>
+    <td width="62%"><marquee>准备出发时鼓舞人心的配乐</marquee></td>
+  </tr>
+</table>
+</div>
+
+<!-- footer代码 开始 -->
+<footer>
+<div id="footer_all">
+  <div id="f1170-167">
+    <div id="logo-175-40"><a href="index.html"><img src="images/logo.png" width="180" /></a></div>
+    <div class="aye" id="login">
+      <table width="103" border="0">
+        <tr>
+          <td width="97" height="37" align="left"><a href="about.html" class="ayahei">了解更多</a></td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="aye" id="login">
+      <table width="103" border="0">
+        <tr>
+          <td width="97" height="37" align="left"><span class="ayahei"><a href="login.html">注册账号</a></span><a href="Login.html"></a></td>
+        </tr>
+      </table>
+    </div>
+    
+    <div id="right828-167">
+      <div id="l-828-80">
+        <div id="r-150-42"><a href="#"><img src="images/fb.png" width="45" height="45"></a></div>
+        <div id="r-150-42-1"><a href="#"><img src="images/tw.png" alt="" width="45" height="45"></a></div>
+        <div id="r-150-42-1"><a href="#"><img src="images/ins.png" alt="" width="45" height="45"></a></div>
+      </div>
+      <div id="r-lianjie"><table width="100%" border="0">
+  <tr>
+    <td align="right">© 疫帮跑&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;</td>
+  </tr>
+</table>
+</div>
+    </div>
+  </div>
+</div>
+</footer>
+<!-- 代码 结束 -->
+</body>
+</html>
+<!-- 滚动js开始 -->
+<script type="text/javascript">
+    //纵向滚动 需要设置div的高度
+    var speed=90
+    marquePic2.innerHTML=marquePic1.innerHTML
+    function Marquee(){
+        if(demo.scrollTop>=marquePic1.scrollHeight){
+            demo.scrollTop=0
+        }else{
+            demo.scrollTop++
+        }
+    }
+    var MyMar=setInterval(Marquee,speed)
+    demo.onmouseover=function() {clearInterval(MyMar)}
+    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+</script>
+<!-- 滚动结束 -->
