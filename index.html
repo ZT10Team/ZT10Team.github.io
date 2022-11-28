@@ -1,834 +1,306 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN ">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZT①战队 || 欢迎来到ZT①战队的博客</title>
-    <meta name="author" content="F1nAl_">
-    <meta name="description" content="从zero到one（1） ">
-    <meta name="keywords" content=" ">
-    <link rel="icon" href="/../avatar.png">
-    <link rel="stylesheet" href="/css/antd.min.css">
-    
-    <link rel="stylesheet" href="/css/full-theme.css">
-    
-    <script src="/js/vue.js"></script>
-    <script src="/js/antd.min.js"></script>
-<meta name="generator" content="Hexo 5.4.2"></head>
-
+    <title>三江说</title>
+    <script src="js/jquery-3.6.1.js"></script>
+    <link rel="stylesheet" href="css/usual_css.css">
+    <link rel="stylesheet" href="css/index_css.css">
+    <!--    轮播图调用的css和js 开始-->
+    <link rel="stylesheet" href="css/index_round_flickity.css">
+    <link rel="stylesheet" href="css/index_round_style.css">
+    <script src="js/index_round_jquery.min.js"></script>
+    <script src="js/index_round_flickity.pkgd.js"></script>
+    <script src="js/index_round_index.js"></script>
+    <!--    轮播图调用的css和js 结束-->
+    <script src="js/index_grid_Vue-v2.6.10.js"></script>
+</head>
 <body>
-
-    <div id="loading"
-        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
-        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
-        <div
-            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
-            <div id="loadcontent"
-                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
-                <div>
-                    <h2>LOADING...</h2>
-                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
-                    <div>
-                        <img src="/dancingkitty.gif" alt="loading">
-                    </div>
+<!-- 页首 开始 -->
+<div id="top">
+    <div id="above">
+        <div id="Logo"><a href="index.html"><img src="img/sju_logo_sjspeak_usual_empty.png" width="450" height="70"></a></div>
+        <div id="search">
+            <label for="textfield"></label>
+            <input name="textfield" type="text" id="textfield" value="  搜索" maxlength="15">
+        </div>
+    </div>
+</div>
+<!-- 页尾 结束 -->
+<!-- 导航条代码 开始 -->
+<div class="nav">
+    <ul class="list">
+        <li><a href="https://www.sju.edu.cn">学校首页</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="#">三江&middot人说 <img src="img/down.svg" alt="" width="12" height="12"></a>
+            <div class="down"> <a href="index2.html#index2_speak">&nbsp;&nbsp;三江&middot访谈&nbsp;&nbsp;&nbsp;</a> <a href="index2.html#index2_youth_talk">&nbsp;&nbsp;三江&middot青年说&nbsp;&nbsp;&nbsp;</a> <a href="#">&nbsp;&nbsp;三江&middot教师说&nbsp;&nbsp;&nbsp;</a> <a href="#">&nbsp;&nbsp;三江&middot职工说&nbsp;&nbsp;&nbsp;</a></div>
+        </li>
+        <li><a href="view_talks.html">三江&middot景说 </a></li>
+        <li><a href="login.html">三江&middot文说 </a></li>
+        <li><a href="about.html">关于我们 </a></li>
+    </ul>
+</div>
+<!-- 导航条代码 结束 -->
+<!--index轮播图代码 开始-->
+<div class="gallery">
+    <div class="gallery-cell">
+        <img src="img/test1.jpg" alt="" />
+    </div>
+    <div class="gallery-cell">
+        <img src="img/test2.jpg" alt="" />
+    </div>
+    <div class="gallery-cell">
+        <img src="img/test3.jpg" alt="" />
+    </div>
+    <div class="gallery-cell">
+        <img src="img/test4.jpg" alt="" />
+    </div>
+    <div class="gallery-cell">
+        <img src="img/test5.jpg" alt="" />
+    </div>
+</div>
+<!--轮播图的代码-->
+<!--index轮播图代码 结束-->
+<!-- 折叠式轮播图代码 开始 -->
+<div class="div_index_center"><img  class="index_center"src="img/index_sj_younth_speak.png"></div>
+<div class="bk bk-fengqin" id>
+    <div class="fengqin-box g-w1200">
+        <ul>
+            <li class="item">
+                <div class="right-img">
+                    <a href="#" target="_blank">
+                        <--! 插入图片 -->
+                        <img src="img/test1.jpg" class="img-exp" width="744" height="493" alt="沈艺">
+                    </a>
+                    <p class="auto-title">
+                        <a href="#" target="_blank">中国人民解放军战略支援部队特色医学中心消化内科主任</a>
+                    </p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="layout">
-        <transition name="into">
-            <div v-show="show_page" style="display: none;">
-                <div id="menu_show">
-                     
-<nav id="menu">
-    <div class="desktop-menu">
-        <a href="/">
-            <span class="title">ZT①战队</span>
-        </a>
-        
-        <a href="/">
-            <span>
-                <a-icon type="home" theme="filled" />
-            </span>
-            <span>home</span>
-        </a>
-        
-        <a href="/2022/05/08/%E2%80%9CHELLO%20WORLD%20!%E2%80%9D/">
-            <span>
-                <a-icon type="idcard" theme="filled" />
-            </span>
-            <span>about</span>
-        </a>
-        
-        <a href="/archives">
-            <span>
-                <a-icon type="folder" theme="filled" />
-            </span>
-            <span>archives</span>
-        </a>
-        
-        <a href="/like/categories">
-            <span>
-                <a-icon type="book" theme="filled" />
-            </span>
-            <span>categories</span>
-        </a>
-        
-        <a href="/like/tags">
-            <span>
-                <a-icon type="tags" theme="filled" />
-            </span>
-            <span>tags</span>
-        </a>
-        
-    </div>
-
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div :class="'title'" @click="menu_show=!menu_show">
-            <span style="margin-right: 10px;">
-                <a-icon type="appstore" theme="filled" />
-            </span>
-            <span>ZT①战队</span>
-        </div>
-        <div class="items" v-show="menu_show">
-            
-            <a href="/">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="home" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                <p class="shuoming">
+                    <a href="#" target="_blank">中国人民解放军战略支援部队特色医学中心消化内科主任</a>
+                </p>
+                <div class="vtitle">李连勇</div>
+            </li>
+            <li class="item">
+                <div class="right-img">
+                    <a href="#" target="_blank">
+                        <--! 插入图片 -->
+                        <img src="img/test2.jpg" class="img-exp" width="744" height="493" alt="沈艺">
+                    </a>
+                    <p class="auto-title">
+                        <a href="#" target="_blank">沈艺</a>
+                    </p>
                 </div>
-            </a>
-            
-            <a href="/2022/05/08/%E2%80%9CHELLO%20WORLD%20!%E2%80%9D/">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="idcard" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                <p class="shuoming">
+                    <a href="#" target="_blank"></a>
+                </p>
+                <div class="vtitle">沈艺</div>
+            </li>
+            <li class="item">
+                <div class="right-img">
+                    <a href="#" target="_blank">
+                        <--! 插入图片 -->
+                        <img src="img/test3.jpg" class="img-exp" width="744" height="493" alt="沈艺">
+                    </a>
+                    <p class="auto-title">
+                        <a href="#" target="_blank">沈艺</a>
+                    </p>
                 </div>
-            </a>
-            
-            <a href="/archives">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="folder" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                <p class="shuoming">
+                    <a href="#" target="_blank"></a>
+                </p>
+                <div class="vtitle">毛晓莹</div>
+            </li>
+            <li class="item">
+                <div class="right-img">
+                    <a href="#" target="_blank">
+                        <--! 插入图片 -->
+                        <img src="img/test4.jpg" class="img-exp" width="744" height="493" alt="沈艺">
+                    </a>
+                    <p class="auto-title">
+                        <a href="#" target="_blank">沈艺</a>
+                    </p>
                 </div>
-            </a>
-            
-            <a href="/like/categories">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="book" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                <p class="shuoming">
+                    <a href="#" target="_blank"></a>
+                </p>
+                <div class="vtitle">瞿雯婷</div>
+            </li>
+            <li class="item">
+                <div class="right-img">
+                    <a href="#" target="_blank">
+                        <--! 插入图片 -->
+                        <img src="img/test5.jpg" class="img-exp" width="744" height="493" alt="沈艺">
+                    </a>
+                    <p class="auto-title">
+                        <a href="#" target="_blank">沈艺</a>
+                    </p>
                 </div>
-            </a>
-            
-            <a href="/like/tags">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="tags" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
-                </div>
-            </a>
-            
-        </div>
-        <div class="curtain" v-show="menu_show"></div>
+                <p class="shuoming">
+                    <a href="#" target="_blank"></a>
+                </p>
+                <div class="vtitle">陈奕坤</div>
+            </li>
+        </ul>
     </div>
-
-</nav>
-                </div>
-
-                <div id="main">
-                    <div id="home-head" style=background-image:url('home.jpg')>
-    <script>
-        var menu = document.getElementById("menu")
-        menu.className += " menu-color"
-    </script>
-     
-    <div id="home-info" class="home-info" @click="home_click">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>ZT①战队</h1>
-                <h3>欢迎来到ZT①战队的博客</h3>
-                <h5>从zero到one（1）</h5>
-            </div>
-        </span>
-    </div>
-     
 </div>
-
-
-
-<div id="home-posts-wrap" class=>
-    <div id="home-posts">
-
-        <div id="posts">
-            
-
-<div class="post">
-
-    <a href="/2022/05/16/【CTF入门】常用工具的环境搭建/">
-        <h2>
-            【CTF入门】常用工具的环境搭建（Python篇）
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/16
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="1-Python篇"><a href="#1-Python篇" class="headerlink" title="1. Python篇"></a>1. Python篇</h2><p>​       对于ctf中常用的解密方法有很多，而脚本编写则绕不开python这一工具。但对于大多新手python环境的构建是一项令人头疼的事情，要不断的去网上找资源，去比对网上的电脑和自己电脑的区别，而本篇则是笔者在安装python时的经验。</p>
-<p>​     另：现阶段已经大部分在使用python 3了，但做一些老题目时可能会遇到从网上down下来的代码放入python 3中跑不起来的情况（毕竟python 2的版本也才2020年结束更新）所以在这里python 2的安装也会介绍。 </p>
-<h3 id="Python-3"><a href="#Python-3" class="headerlink" title="Python 3"></a>Python 3</h3><p>对于python的下载直接去网上搜索<a href="(https://www.python.org/)">python 官网</a>进行下载。</p>
-<p>由于官网的页面形式改变所以只能靠读者自己下载了。在这里我只对当前的页面进行讨论。<br><img src="https://img-blog.csdnimg.cn/b2b0b34242db4689a5d4a99dd1e35fe6.png#pic_center" alt="1"></p>
-<p>选择download的releases 进入下一个页面，滑动滚轮到</p>
-<p><img src="https://img-blog.csdnimg.cn/a35dcc345f3c44e7923c492d59e6514d.png#pic_center" alt="2"></p>
-<p>去选择自己想要的版本。这里推荐python 3 的最新版本就可以了。</p>
-<p><img src="https://img-blog.csdnimg.cn/d160a27808634fb1880cdd617c495fc3.png#pic_center" alt="3"><br>在这里选择合适的版本进行下载。</p>
-<p>（在这里下载可能会有点慢，读者可以考虑科学上网，当然没有可以科学上网的方式笔者这里推荐一个软件 steam++对于打游戏的应该挺熟悉的但它还可加载国外一些网页的读取速度，比如/github之类的。下载方式呢直接去B站搜）。</p>
-<p>下载好后安装到这个页面</p>
-<p><img src="https://img-blog.csdnimg.cn/d3a05f7de57846509050aa5ce2c61729.png#pic_center" alt="4"><br>在这里 记得选中Add Python 3.8 to PATH 这个选项，他会自行环境变量安装，不用手动安装（感动，能够自行安装环境变量的软件是个好软件！！）。</p>
-<p>同时选中自定义安装也就是Customize installation（作为学习计算机的那肯定逼格要高点啊）。</p>
-<p><img src="https://img-blog.csdnimg.cn/5c60fe9c36ca4f7c87eb1ac9a4fdf572.png#pic_center" alt="5"><br>在这里全选就可以了，尤其是pip这个选项，他作为一个工具包在日后的学习还是很重要的。</p>
-<p>NEXT 继续</p>
-<p><img src="https://img-blog.csdnimg.cn/6084278598884041a2150a392163a1bd.png#pic_center" alt="6"><br>前面勾选中第四个一定勾选（会添加到环境变量）</p>
-<p>这里需要更改下安装地址Customize install location </p>
-<p>推荐安装在C盘这样后续会方便很多，当然C盘爆红了的话安装在其他盘也没问题。但在这里需要注意的是将文件安装在表层（这样会避免日后很多麻烦）比如笔者这个应该跟改为C:\python 就可以了。同时命名文件的时候应该避免出现中文，特殊字符，空格之类的。</p>
-<p>继续安装。</p>
-<p><img src="https://img-blog.csdnimg.cn/fd26f65cbaff458d84bcb9c1d0dd4692.png#pic_center" alt="7"><br>这里会提示安装成功 Setup was successful。</p>
-<p>同时下面会出现一行 Disable path length limit 提示字样。</p>
-<p>点击这个地方（禁用文件深度最大限制，之后可能会对第三方库的时候会报错，那时候就要搞注册表之类的了很麻烦）</p>
-<p>至此Python的安装就完成了。</p>
-<p>当想要验证是否安装完成那就要去打开命令提示符（在windows的搜索中搜索cmd）</p>
-<p>输入指令 python –version</p>
-<pre><code>C:\Users\用户名&gt;python --version
-Python 3.10.4
-</code></pre>
-<p>会出现python版本。</p>
-<p>同时对于上文中的pip验证也是利用 pip –version </p>
-<pre><code>C:\Users\用户名&gt;pip --version
-pip 22.0.4 from C:\文件地址 (python 3.10)
-</code></pre>
-<h3 id="Python-2"><a href="#Python-2" class="headerlink" title="Python 2"></a>Python 2</h3><p>对于python 2 来说安装步骤相较于python 3麻烦了很多，而且可能还会遇到环境变量被自己误删了的情况（别问我怎么知道的）所以我尽量简单的陈述安装过程。</p>
-<p>安装同样也要去官网安装</p>
-<p><img src="https://img-blog.csdnimg.cn/858cbde1c6c64cdda538f993d2e6a592.png#pic_center" alt="8"></p>
-<p>选择download的releases 进入下一个页面，滑动滚轮到</p>
-<p><img src="https://img-blog.csdnimg.cn/1fdb23450c684af88135c06441433aff.png#pic_center" alt="9"></p>
-<p>在这里的话选择 python 2.7.18（因为这是python 2 的最后一个版本）</p>
-<p><img src="https://img-blog.csdnimg.cn/ffea00cc5d77426b92e9400f49873353.png#pic_center" alt="10"><br>选择自己合适的版本（这里因为我的电脑是win 10 64位）所以选择的是这个。</p>
-<p>打开安装包</p>
-<p><img src="https://img-blog.csdnimg.cn/ea7b996794244bdfb4e64284e1266c44.png#pic_center" alt="11"></p>
-<p>这里的话两个随便选问题都不大。Next</p>
-<p><img src="https://img-blog.csdnimg.cn/2a1da611f7c7473b836735cfe1fc44a4.png#pic_center" alt="12"></p>
-<p>这里可以更改安装包位置，同时建议安装再C盘，以及将其安装再文件表层，例如我这样的安装方式。Next</p>
-<p><img src="https://img-blog.csdnimg.cn/7c69415b53f143f6902e9568e251b2e6.png#pic_center" alt="13"></p>
-<p>Next。</p>
-<p>然后就安装完成，但在这地方还需要去添加Python的环境变量。</p>
-<p>在windows的搜索中搜索编辑系统环境变量。打开后点击环境变量</p>
-<p><img src="https://img-blog.csdnimg.cn/83184f58378547f18d95fa077de37e16.png#pic_center" alt="14"></p>
-<p>找到PATH</p>
-<p><img src="https://img-blog.csdnimg.cn/d2bb65302bb54b458a647af70a6a7ceb.png#pic_center" alt="15"></p>
-<p>双击进入PATH的编辑环境</p>
-<p><img src="https://img-blog.csdnimg.cn/85ca95468d5d4d02b3344d07d5e9abde.png#pic_center" alt="16"></p>
-<p>去新建输入python的安装地址（当然也可以浏览到python的文件地址，笔者这里就只是放在了E盘中的python中所以直接浏览到这个文件加选中就行）</p>
-<p>另选新建输入python安装文件的子级文件Scripts可以了（同样可以选择新建的时候浏览）。</p>
-<p><img src="https://img-blog.csdnimg.cn/c865075c8b98473fa3fc3b672bcf7835.png#pic_center" alt="18"></p>
-<p>当然可能会出现这样的提示，这里和上文的没太大区别，在这里只需要去手动输入自己安装的python文件地址，同时再每一个环境变量前后都要加 ;  就可以了。但要注意这里是添加而不是替换。</p>
-<p>当然问题来了，如果不小心删除了系统原来的环境地址怎么办</p>
-<p>记得千万别重启然后参考这个<a target="_blank" rel="noopener" href="https://blog.csdn.net/Monuomeng/article/details/114142919">老哥的做法</a>。</p>
-<p>我这里的方法是重新添加PATH这个变量 并输入</p>
-<pre><code>%SystemRoot%\system32
-%SystemRoot%
-</code></pre>
-<p>这两个变量。然后再尝试进行python地址的输入。</p>
-<p>python 2 的验证如同 python 3 的验证一样</p>
-<p>输入指令 python –version</p>
-<pre><code>C:\Users\用户名&gt;python --version
-Python 3.10.4
-</code></pre>
-<p>会出现python版本。</p>
-<p>同时对于上文中的pip验证也是利用 pip –version </p>
-<pre><code>C:\Users\用户名&gt;pip --version
-pip 22.0.4 from C:\文件地址 (python 3.10)
-</code></pre>
-<p> 至此 python 2 的安装就完成了。</p>
-<p>作者：Fu_N<br>时间：2022 年 5 月 16 日</p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/16/【CTF入门】常用工具的环境搭建/ " class="go-post">
-        阅读全文
-    </a>
+<!-- 折叠式轮播图代码 结束-->
+<!--倾斜动画代码 开始-->
+<div class="div_index_center"><img  class="index_center"src="img/index_sj_cluture_speak.png"></div>
+<div class="grid" id="grid">
+    <photo-card img="img/test1.jpg" link=""></photo-card>
+    <photo-card img="img/test2.jpg" link=""></photo-card>
+    <photo-card img="img/test3.jpg" link=""></photo-card>
+    <photo-card img="img/test4.jpg" link=""></photo-card>
+    <photo-card img="img/test5.jpg" link=""></photo-card>
+    <photo-card img="img/test1.jpg" link=""></photo-card>
+    <photo-card img="img/test2.jpg" link=""></photo-card>
+    <photo-card img="img/test3.jpg" link=""></photo-card>
 </div>
-
-<div class="post">
-
-    <a href="/2022/05/16/啥是CTF？新手如何入门CTF？/">
-        <h2>
-            【CTF入门】啥是CTF？新手如何入门CTF？
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/16
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p><img src="https://img-blog.csdnimg.cn/43610dc9cac24657b7fef9a320a01e02.png#pic_center" alt="ctf"></p>
-<h2 id="CTF是啥"><a href="#CTF是啥" class="headerlink" title="CTF是啥"></a>CTF是啥</h2><p>CTF 是 Capture The Flag 的简称，中文咱们叫夺旗赛，其本意是西方的一种传统运动。在比赛上两军会互相争夺旗帜，当有一方的旗帜已被敌军夺取，就代表了那一方的战败。在信息安全领域的 CTF 是说，通过各种攻击手法，获取服务器后寻找指定的字段，或者文件中某一个固定格式的字段，这个字段叫做 flag，其形式一般为 flag{xxxxxxxx}，提交到裁判机就可以得分。但是不同的比赛会要求提供不同格式的flag，具体根据主办方要求决定。</p>
-<p>信息安全的 CTF 的历史可以说很长了，最早起源于 96 年的 DEFCON 全球黑客大会</p>
-<h2 id="为啥要参加CTF"><a href="#为啥要参加CTF" class="headerlink" title="为啥要参加CTF"></a>为啥要参加CTF</h2><p>入门渗透，那肯定得各种练手对不对？但因为由于《网络安全法》的颁布，随意扫描他人网站，或非授权渗透测试都有一定的风险。18年的一个新闻：</p>
-<p><img src="https://img-blog.csdnimg.cn/792f5cddeeff4a479b4d4068d2c6a3d8.png#pic_center" alt="xin"><br>说实话，这小伙只是在扫描，攻击都被防火墙拦下了，啥都没弄到，结果还是一样被判刑，可谓是偷鸡不成蚀把米了……</p>
-<p><img src="https://img-blog.csdnimg.cn/92409a7503a64dacad8e669e255d7daa.png#pic_center" alt="666"><br>所以记住千万不要乱扫国内的网站，尤其是教育、政府类网站。但初入门的同学学习渗透测试没有一个对应的环境也是不行的。</p>
-<h3 id="攻击网站怎么量刑"><a href="#攻击网站怎么量刑" class="headerlink" title="攻击网站怎么量刑"></a>攻击网站怎么量刑</h3><p><strong>根据《中华人民共和国刑法》第二百八十六条：违反国家规定，对计算机信息系统功能进行删除、修改、增加、干扰，造成计算机信息系统不能正常运行，后果严重的，处五年以下有期徒刑或者拘役;后果特别严重的，处五年以上有期徒刑。</strong><br>==<strong>这边建议学习ctf前先学习一下《网安法》</strong>==</p>
-<p>而常见的靶机对于小白来说太过复杂，很容易不知如何下手。这个时候 CTF 就非常适合了，CTF 一般是一个题目有一个或几个知识点相互糅合，相对来说目标性比较强。如果想要体会到安全的成就感和趣味性，促进自己边练边学，CTF 就是一个很好的选择。</p>
-<h2 id="CTF-的类型"><a href="#CTF-的类型" class="headerlink" title="CTF 的类型"></a>CTF 的类型</h2><p>CTF 题目类型一般分为 Web 渗透、RE 逆向、Misc 杂项、PWN 二进制漏洞利用、Crypto 密码破译，有志于渗透测试的同学一开始建议从 Web 渗透的题目开始，辅以 Misc 杂项和 Crypto 密码学。</p>
-<p>CTF 主要分为两种模式，一是解题模式。对于 Web 安全来说，会要求你入侵网站或者靶机，攻击成功后系统会显示flag或者在某个目录 文件 数据库寻找 Flag，提交到答题系统得分。逆向工程题目一般形式是破解注册机、动态调试、dump 内存等等。这些题目可以百度或谷歌别人的解题报告（ 关键字：CTF writeup）来认识一下。</p>
-<p>这种模式的缺点是类似于“应试教育”，当前的趋势是注重出题难、出题偏，没有考虑实际，就跟奥数似的。而且这种模式只有攻击，却没有防守，而在企业中工作更多的还是考虑如何防护的问题，这个时候 AWD 攻防赛模式就应运而生了。</p>
-<p><img src="https://img-blog.csdnimg.cn/1d8ec5bdccd3445780c12b74b8e0442b.gif#pic_center" alt="ciji"><br>二是攻防赛，也叫 AWD(Attack With Defense，攻防兼备)模式。你需要在一场比赛里要扮演攻击方和防守方，攻者得分，失守者会被扣分。也就是说，攻击别人的靶机可以获取 Flag 分数时，别人会被扣分，同时你也要保护自己的主机不被别人得分，以防扣分。</p>
-<p>这种模式非常激烈，准备要非常充分，手上要有充足的防守方案和 EXP 攻击脚本。这种比赛不用慌，多打多学多积累就好了。</p>
-<p><strong>CTF 里面也有一血之说，谁第一个交 Flag 能获得分数加成，所以说手快也很重要。不过一般来说是没有别的大佬手快的。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/4621c6e358fb4cb48cd952dab5c1e142.png#pic_center" alt="first"></p>
-<h2 id="CTF-和现实渗透的对比"><a href="#CTF-和现实渗透的对比" class="headerlink" title="CTF 和现实渗透的对比"></a>CTF 和现实渗透的对比</h2><p>现实的渗透测试会有非常完整的流程，从信息收集、漏洞探测开始，再逐项攻击，很多时候会一无所获。相比之下，CTF 的目标会比较明确，中等难度以下的题目一般都会在题目描述中提示漏洞的发生处，没有提示的话检测点也不会很多，一个个筛查就可以了。</p>
-<p>其次，有很多 CTF 题目会有点脱离现实渗透，套路、脑洞比较多，有的知识点并不实用……怎么说呢？</p>
-<p>有的时候出题人为了出点新题会把题目设置得脑洞要特别大才能做出来，Misc 安全杂项更是这种题的重灾区。做这种题其实对现实渗透没啥帮助，比如说这道密码题，第一次见的时候头大得一笔，各位先猜猜看是啥：</p>
-<p><img src="https://img-blog.csdnimg.cn/42fe8a0fb7a34bf4828a86da43b91a9b.png#pic_center" alt="fo"><br><strong>我反正我是麻了…</strong></p>
-<p>做多了 CTF 的同学应该知道，这是「与佛论禅」密码加密，第一次做到谁想出来……</p>
-<p><img src="https://img-blog.csdnimg.cn/36f4f8cc91bc48febc773dda38f0468a.png#pic_center" alt="foyue"><br>类似这种摸不着头脑、要用特别奇怪的姿势或套路做题的题目也屡见不鲜。<br><strong>但是misc吸引人的地方就是：<del>越做越好玩！</del>(bushi!)</strong></p>
-<p>因此较为简单、脑洞略大的 CTF 题仅作扩充知识面就好了。话虽如此，现在 CTF 大赛都已经往实战的方向走了，高水准的 CTF 题目很多都会模拟真实的网站，让你更加有真实渗透的代入感，渗透手法也更加贴近实战。国内比较良心的 CTF 有 DDCTF、安恒杯月赛 CTF、iscc 等等。</p>
-<p>关于 CTF 赛事的信息可以关注 XCTF 社区或 CTFtime 整理的赛事链接。虽然非常可能在比赛里打不过各位大佬，但是划划水，学习学习知识也是非常不错滴。</p>
-<p><img src="https://img-blog.csdnimg.cn/f293d61c625b431f9d3abe8a6eb39b8b.jpeg#pic_center" alt="cai"></p>
-<h2 id="WP是什么东东，有什么用？"><a href="#WP是什么东东，有什么用？" class="headerlink" title="WP是什么东东，有什么用？"></a>WP是什么东东，有什么用？</h2><p>WP是writeup的简称，本意是指详细写的意思。我们通常所说的writeup指的是⼀个题⽬的解。 ⽐赛结束后，通常主办⽅会要求排名靠前的提交writeup，看你是怎么做的。这不仅是为了证明题是你做的，⽽且由于ctf题⽬通常⼀题都是有n种解法的，这样做也可以因此扩展其他选⼿的知识。当然，也能够帮你记住一些解题方法和思路，忘了就看看，超有用！！！</p>
-<p>如果不记WP，你就会<br><img src="https://img-blog.csdnimg.cn/7360dabcb37a405393ddb9b4b763a414.jpeg#pic_center" alt="hui"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我搜集了一些入门比较可以的 CTF 靶场，想了想，下次再发吧。</p>
-<p>新手入门的话，在靶场慢慢刷题，对于不会的题目直接百度或者谷歌，都会有很多解题报告，遇到不会的知识点也要善于使用搜索引擎。</p>
-<p>作者 F1nAl_<br>2021 年 05月 16日</p>
-
-            
+<!--倾斜动画代码 结束-->
+    <!--人景文 开始-->
+    <div class="div_index_center"><img  class="index_center"src="img/index_sj_people_culture_view.png"></div>
+    <div class="welcome team">
+        <div class="container">
+            <div class="team-grids">
+                <ul class="ch-grid">
+                    <li class="ch-grid-item">
+                        <div class="ch-item ch-img-1">
+                            <div class="ch-info">
+                                <h3>人</h3>
+                                <p>&nbsp;</p>
+                                <ul class="social-icons"></ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ch-grid-item">
+                        <div class="ch-item ch-img-2">
+                            <div class="ch-info">
+                                <h3>景</h3>
+                                <p>&nbsp;</p>
+                                <ul class="social-icons"></ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ch-grid-item">
+                        <div class="ch-item ch-img-3">
+                            <div class="ch-info">
+                                <h3>文</h3>
+                                <p>&nbsp;</p>
+                                <ul class="social-icons"></ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
         </div>
     </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/16/啥是CTF？新手如何入门CTF？/ " class="go-post">
-        阅读全文
-    </a>
+    <!--人景文 结束-->
+<!--尾部 开始-->
+<div class="foot">
+    <img src="img/sju_logo_white_empty.png" alt="">
+    <p>团队成员：沈艺、王禹璇、瞿雯婷、毛晓莹、陈奕坤&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三江学院计算机科学与工程学院<br>Copyright&#169;版权所有</p>
 </div>
-
-<div class="post">
-
-    <a href="/2022/05/15/【CTF入门】MISC-图片隐写部分/">
-        <h2>
-            【CTF入门】MISC 图片隐写部分
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/15
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <blockquote>
-<p>图片隐写是通过一些方法或工具将想要传递的信息隐藏起来，不让除计划的接收者以外的任何人知道信息的传递事件的一门技巧与科学。</p>
-</blockquote>
-<hr>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p><code> 一般来说，刚开始学习时候需要认识到相关工具，而在做相关题目时通过不断的摸索就能熟练工具的使用方法。</code></p>
-<p>部分常用工具：</p>
-<pre><code>010Editor
-
-stegsolve
-
-winhex
-
-binwalk
-
-foremost
-    
-</code></pre>
-<p>工具: <a target="_blank" rel="noopener" href="https://www.ctftools.com/down/">https://www.ctftools.com/down/</a></p>
-<hr>
-<h1 id="常见题目类型"><a href="#常见题目类型" class="headerlink" title="常见题目类型"></a>常见题目类型</h1><p><code>以下是一些比较常见的题目类型</code></p>
-<h2 id="一、LSB"><a href="#一、LSB" class="headerlink" title="一、LSB"></a>一、LSB</h2><blockquote>
-<p>LSB也就是最低有效位 (Least Significant Bit)</p>
-</blockquote>
-<p>图片中的像数一般是由三种颜色组成，即三原色，由这三种原色可以组成其他各种颜色。LSB隐写就是将需要隐藏的信息转二进制后，再将载体图片里的像素点的RGB值转二进制，然后将我们需要隐藏的信息（二进制后）逐一替换转换后的RGB值的最后一位，最后再将转换后的RGB值再转为图片输出，而人眼并不能直接看出，从而达到隐藏信息的作用。</p>
-<p>==一般只针对png或者bmp格式的图片，可以使用stegsolve解题==</p>
-<h2 id="二、改写图片高度"><a href="#二、改写图片高度" class="headerlink" title="二、改写图片高度"></a>二、改写图片高度</h2><p>示例：<img src="https://img-blog.csdnimg.cn/13eb7ef2e4954cc7be5b3d5ff7bf4b0f.png#pic_center" alt="89 50 4E 47 是PNG图片的头文件格式"></p>
-<blockquote>
-<p>89 50 4E 47 0D 0A 1A 0A                     //文件头<br>00 00 00 0D（即为十进制的13）        //代表数据块的长度为13<br>49 48 44 52（即为ASCII码的IHDR） //IHDR的标识<br>00 00 05 CE                                       //图片的宽度<br>00 00 02 EE                                        //图片的高度</p>
-</blockquote>
-<p>有些题目可能会改写所给图片的高度，将信息隐藏在图片未展示的地方，使用010、winhex等都可以修改此处，通常隐藏的是二维码或者ascii码等，而并不是直接给flag。</p>
-<h2 id="三、GIF动态分帧"><a href="#三、GIF动态分帧" class="headerlink" title="三、GIF动态分帧"></a>三、GIF动态分帧</h2><blockquote>
-<p>GIF图片隐藏的信息一般在某一帧数，而gif图片又在不断的动，不易截图，但可以通过stegsolve逐帧看，从而找到那一帧图片</p>
-</blockquote>
-<p>例如：<br><img src="https://img-blog.csdnimg.cn/ae7bbe7e2a23484aa97f0cbb2035780a.png#pic_center" alt="gif图片"><br>这是通过stegslove得到的，原图是一张GIF图片，其中一帧就是隐藏的本张图片。当然，它隐藏的一般也不会是flag，同样可能是二维码或者ascii码等。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>解MISC时会涉及到各种脑洞，各种花式技巧，主要考察选手的快速理解、学习能力以及日常知识积累的广度、深度。</p>
-<p>作者  A5D<br>2021 年 05月 15日    </p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/15/【CTF入门】MISC-图片隐写部分/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/05/15/【遇到的几种编码】/">
-        <h2>
-            【CTF入门】MISC-遇到的几种编码
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/15
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="1-佛说解密"><a href="#1-佛说解密" class="headerlink" title="1.佛说解密"></a>1.佛说解密</h2><p><img src="https://img-blog.csdnimg.cn/a867273721d84a3ea6a15674ce0b2bed.png" alt="1"></p>
-<h2 id="2-rot13解密"><a href="#2-rot13解密" class="headerlink" title="2.rot13解密"></a>2.rot13解密</h2><p><img src="https://img-blog.csdnimg.cn/3ad2b68c6cad4097b7ff606966a6de7f.png" alt="2"></p>
-<h2 id="3-base64解密"><a href="#3-base64解密" class="headerlink" title="3.base64解密"></a>3.base64解密</h2><p><img src="https://img-blog.csdnimg.cn/b3255371b4d248d8b8857251cdb56562.png" alt="3-1"></p>
-<p><img src="https://img-blog.csdnimg.cn/388c7da120874cd9a7afc7671e18647b.png" alt="3-2"><br>关于base64密码<br>原理如图<br><img src="https://img-blog.csdnimg.cn/86a045f8ddfc46799bcb2e1f8729047e.png" alt="3-3"><br><em><strong>一般有等号都是base64</strong></em></p>
-<h2 id="4-摩斯密码"><a href="#4-摩斯密码" class="headerlink" title="4.摩斯密码"></a>4.摩斯密码</h2><p><em><strong>遇到黑白图、长短等都可以考虑摩斯密码</strong></em><br><img src="https://img-blog.csdnimg.cn/984529d6fe2d4ed59a6a18415bcf456b.png" alt="4"></p>
-<h2 id="5-二进制转字符"><a href="#5-二进制转字符" class="headerlink" title="5.二进制转字符"></a>5.二进制转字符</h2><p><em><strong>遇到黑白图等都可以考虑二进制转字符</strong></em><br><img src="https://img-blog.csdnimg.cn/4312266598bb4cc7abb75ba076ba9a14.png" alt="5"></p>
-<h2 id="6-十六进制转文本"><a href="#6-十六进制转文本" class="headerlink" title="6.十六进制转文本"></a>6.十六进制转文本</h2><p><img src="https://img-blog.csdnimg.cn/62089bbe0d9c4d2b922b474e1de19e11.png" alt="6"></p>
-<h2 id="7-aes解码"><a href="#7-aes解码" class="headerlink" title="7.aes解码"></a>7.aes解码</h2><p><em><strong>需要密钥</strong></em><br><img src="https://img-blog.csdnimg.cn/28b0990660c04b1e9f2cafe98da86cd1.png" alt="7"></p>
-<h2 id="8-brainfuck语言"><a href="#8-brainfuck语言" class="headerlink" title="8.brainfuck语言"></a>8.brainfuck语言</h2><p>百度百科一下<br><img src="https://img-blog.csdnimg.cn/00a3cf4fd9234a2da219515f9da83272.png" alt="8-1"><br>真神奇<br><img src="https://img-blog.csdnimg.cn/2389c28380e54c06b6ff978a872bcda5.png" alt="8-2"></p>
-<pre><code>总结：新手入门，了解的还比较少不够深入，遇到编码题多多尝试
-</code></pre>
-<p><del>下次再见！</del></p>
-<p>作者  L1U_u<br>2021 年 05月 15日    </p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/15/【遇到的几种编码】/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/05/15/【MISC部分考点】/">
-        <h2>
-            【CTF入门】Misc部分考点分析
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/15
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>安全杂项简称misc：电子取证、隐写术、编码和解码、数据包分析、大数据统计、PS等等</p>
-<h1 id="Misc部分考点分析："><a href="#Misc部分考点分析：" class="headerlink" title="Misc部分考点分析："></a>Misc部分考点分析：</h1><h2 id="Word"><a href="#Word" class="headerlink" title="Word"></a>Word</h2><p>1.010打开直接发现flag<br><img src="https://img-blog.csdnimg.cn/9487c9343b8149c785a0a3f9ce1c1670.png" alt="在这里插入图片描述"></p>
-<p>2.本质是一个压缩包zip，里面可以隐藏图片或者txt<br>3.word显示隐藏文字内容，或者将flag的字体颜色设置成白色或其他与文件背景一致的颜色，或者写的很小在文件底部，甚至在图片的下面，也就是被图片覆盖住了<br>4.有时候也会在属性中藏有信息<br> <img src="https://img-blog.csdnimg.cn/fae457ddaff9483b881c2902ad4eddbc.png" alt="在这里插入图片描述"></p>
-<h2 id="图片隐写术"><a href="#图片隐写术" class="headerlink" title="图片隐写术"></a>图片隐写术</h2><p>1.图片查看备注或者详细信息<br>2.用010查看内容，有没有类似PK，RAR，txt，flag，key等信息<br>3.图片修改高度<br> <img src="https://img-blog.csdnimg.cn/9ae09529e6ce4a48a53e2697018f1143.png" alt="在这里插入图片描述"></p>
-<p>4.Stegsolve 可以看常规的图片隐写，发现LSB隐写等等。<br>5.binwalk或者foremost进行图片分离<br> <img src="https://img-blog.csdnimg.cn/ab47d29895e943f5bf59cd2ce3a9dea1.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/a3b6e136a4a94ecc8a6e7c7d33a91630.png" alt="在这里插入图片描述"></p>
-<p>6、PS分离图层，或者拼接图片<br> <img src="https://img-blog.csdnimg.cn/3162032b14c24849939f8ad276c0dc81.png" alt="在这里插入图片描述"></p>
-<ol start="7">
-<li>GIF动态分帧：将信息隐藏在动态图中，一闪而过，肉眼难以看到。可以用PS或者GIF分帧工具解题<br><img src="https://img-blog.csdnimg.cn/dc16ef1bf20044788bc1730402815fb8.png" alt="在这里插入图片描述"></li>
-</ol>
-<p>8.还有一些隐写术解法，包括：<br><em><strong>F5刷新隐写工具、Steghide隐写工具、Image Steganography隐写工具、Outguess隐写工具</strong></em></p>
-<h2 id="Mp3音频隐写术"><a href="#Mp3音频隐写术" class="headerlink" title="Mp3音频隐写术"></a>Mp3音频隐写术</h2><p>一般是看波形和频谱（使用audacity软件）<br>1.看波形是一个摩斯密码，解码得到flag<br> <img src="https://img-blog.csdnimg.cn/cc7368470ab94c4f9e0c647a43002790.png" alt="在这里插入图片描述"></p>
-<p>2.看频谱得flag<br>3.MP3Stego软件进行音频隐写，在压缩过程中，这个软件会将信息隐藏在MP3文件中，数据首先被压缩、加密，然后隐藏在mp3比特流中。可以百度查看本工具使用方法</p>
-<h2 id="数据包（流量包）分析"><a href="#数据包（流量包）分析" class="headerlink" title="数据包（流量包）分析"></a>数据包（流量包）分析</h2><p>数据包后缀为.pcapng,使用wireshark抓包软件查看<br>主要考点：<br>1.Wireshark过滤规则：如提示ping，想到是ICMP协议<br>2.网络协议分析（HTTP、SMTP、FTP、TCP），追踪流<br>3.漏洞利用分析（SQL注入）文件提取<br>4.wifi包破解，可以使用aircrack-ng命令</p>
-<p>作者  6AG1e<br>2021 年 05月 15日    </p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/15/【MISC部分考点】/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/05/08/“HELLO WORLD !”/">
-        <h2>
-            HELLO WORLD !
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/5/8
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h1 id="“HELLO-WORLD-”"><a href="#“HELLO-WORLD-”" class="headerlink" title="“HELLO WORLD !”"></a>“HELLO WORLD !”</h1><hr>
-<h2 id="ZT①战队，组建于5月1日三江学院东山校区，由一群志同道合的小伙伴共同组成，热爱学习。想要在网络安全和网络工程中闯出自己的一片天地！"><a href="#ZT①战队，组建于5月1日三江学院东山校区，由一群志同道合的小伙伴共同组成，热爱学习。想要在网络安全和网络工程中闯出自己的一片天地！" class="headerlink" title="ZT①战队，组建于5月1日三江学院东山校区，由一群志同道合的小伙伴共同组成，热爱学习。想要在网络安全和网络工程中闯出自己的一片天地！"></a><em>ZT①战队</em>，组建于5月1日三江学院东山校区，由一群志同道合的小伙伴共同组成，热爱学习。想要在网络安全和网络工程中闯出自己的一片天地！</h2><blockquote>
-<ul>
-<li>战队名称及标识来源</li>
-<li>战队成员及方向</li>
-<li>战队比赛日历</li>
-</ul>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/cc9ddbfb4edb4b0e2ce67c1ad1e7b3ea.png" alt="cmd-markdown-logo"></p>
-<h2 id="战队名称及标识来源"><a href="#战队名称及标识来源" class="headerlink" title="战队名称及标识来源"></a>战队名称及标识来源</h2><p><strong>ZT①，Z代表zero，T代表to，①代表one。</strong>表现了本战队从零开始走向成功的美好愿景。圈里面的一个1，也表现我们时刻团结在一起的决心和信心。<br><strong>logo由心的首字母X和金色的盾牌构成。</strong>表明我们守护网络安全的决心。</p>
-<h2 id="战队成员及方向"><a href="#战队成员及方向" class="headerlink" title="战队成员及方向"></a>战队成员及方向</h2><table>
-<thead>
-<tr>
-<th align="center">成员昵称</th>
-<th align="center">性别</th>
-<th align="center">方向</th>
-<th align="center">职位</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">F1nAl_</td>
-<td align="center">男</td>
-<td align="center">Mobile,Web,Crypto</td>
-<td align="center">队长</td>
-</tr>
-<tr>
-<td align="center">L1U_u</td>
-<td align="center">女</td>
-<td align="center">Web,Misc</td>
-<td align="center">队员</td>
-</tr>
-<tr>
-<td align="center">6AG1e</td>
-<td align="center">男</td>
-<td align="center">Pwn,Re</td>
-<td align="center">队员</td>
-</tr>
-<tr>
-<td align="center">Fu_N</td>
-<td align="center">男</td>
-<td align="center">Web,Pwn</td>
-<td align="center">队员</td>
-</tr>
-<tr>
-<td align="center">W1Nk</td>
-<td align="center">男</td>
-<td align="center">Re,Misc</td>
-<td align="center">队员</td>
-</tr>
-<tr>
-<td align="center">A5D</td>
-<td align="center">男</td>
-<td align="center">Mobile,Crypto</td>
-<td align="center">队员</td>
-</tr>
-</tbody></table>
-<h2 id="战队比赛日历"><a href="#战队比赛日历" class="headerlink" title="战队比赛日历"></a>战队比赛日历</h2><p>2022/4/30<br>ISCC2022(个人赛）<br>参赛队员：F1nAl_、6AG1e、Fu_N、L1U_u、W1Nk、A5D</p>
-<p>2022/5/10<br>看雪·深信服(组队赛)<br>参赛队员：F1nAl_、6AG1e、Fu_N、W1Nk、A5D</p>
-<p>2022/5/28<br>第十五届全国大学生信息安全竞赛初赛(组队赛)<br>参赛队员：F1nAl_、6AG1e、Fu_N、L1U_u</p>
-<p>2022/9<br>H3C<br>参赛队员：F1nAl_、6AG1e、Fu_N、L1U_u、W1Nk、A5D</p>
-<p>2022/10<br>华为ICT<br>参赛队员：F1nAl_、6AG1e、Fu_N、L1U_u、W1Nk、A5D</p>
-<p>作者  F1nAl_<br>2021 年 05月 08日    </p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/05/08/“HELLO WORLD !”/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-
-             
-<div class="page-current">
-
-    <div class="prev">
-        
-    </div>
-
-    <div class="page-index">
-
-        
-
-        <span class="current">
-            1
-        </span>
-
-        
-
-    </div>
-
-    <div class="next">
-        
-    </div>
-
-</div>
-
-        </div>
-    </div>
-    
-    <div id="home-card">
-        <a-affix :offset-top="card_top">
-    <a-card class="card-style" style="width: 300px">
-        <div class="avatar">
-            <img src="../avatar.png " alt="头像">
-        </div>
-        <div class="name">
-            F1nAl_
-        </div>
-        <div class="descriptions">
-            
-            <div class="description">
-                ZT①战队创始人
-            </div>
-            
-            <div class="description">
-                ZT①战队现任队长
-            </div>
-            
-        </div>
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://github.com/ZT10Team">
-
-                    
-                    <a-icon type="github"
-                        theme="filled" />
-                    
-                </a>
-            </span>
-            
-            <span class="icon-link">
-                <a href="">
-
-                    
-                    <a-icon type="twitter"
-                        theme="" />
-                    
-                </a>
-            </span>
-            
-        </div>
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/sheni">
-                    队长F1nAl_知乎
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/gu-min-86-35">
-                    队员L1U_u知乎
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/fu-n-70">
-                    队员Fu_N知乎
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/en-meng-meng-26">
-                    队员6AG1e知乎
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/w1nk-75">
-                    队员W1Nk知乎
-                </a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/a5d-">
-                    队员A5D知乎
-                </a>
-            </div>
-            
-        </div>
-    </a-card>
-</a-affix>
-    </div>
-    
-</div>
-                     
-<footer id="footer">
-    <div class="footer-wrap">
-        <div>
-            © 2022 - 2022 ZT①战队
-            <span class="footer-icon">
-                <a-icon type="flag" theme="filled" /></span>
-            @F1nAl_
-        </div>
-        <div></div>
-        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
-                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
-        
-    </div>
-
-</footer>
-
-<script src="/js/highlight.min.js"></script>
-<script src="/js/particle.js"></script>
-                </div>
-            </div>
-        </transition>
-    </div>
-
-    <script>
-    new Vue({
-        el: "#layout",
-        data: {
-            show_page: false,
-            onload_menu: false,
-            menu_show: false,
-            card_top: 100
-        },
-        created: function () {
-            var that = this
-            window.onload = function () {
-                that.show_page = true
-                document.getElementById("loadcontent").style.opacity = 0
-                setTimeout(function () {
-                    document.getElementById("loadleft").style.width = 0
-                    document.getElementById("loadright").style.width = 0
-                }, 300)
-                setTimeout(function () {
-                    document.getElementById("loading").style = "display:none"
-                }, 600)
-            }
-        },
-        mounted: function () {
-            var that = this
-            window.addEventListener('scroll', function (e) {
-                that.menu_show = false
+<!--尾部 结束-->
+<!-- 折叠式轮播图js代码 开始 -->
+<script>
+    - function () {
+        var $li = $('.fengqin-box li')
+        var imgWidth = 1200 - 71 * $li.length
+// 设置图片说明标题js注入
+        $li.each(function () {
+            $(this).find('.auto-title').html($(this).find('.shuoming').html())
+            $(this).find('.right-img').css({
+                backgroundImage: 'url($url)'.replace('$url', $(this).find('.img-exp').attr('src'))
             })
-        },
-        methods: {
-            home_click: function () {
-                window.scrollTo({
-                    top: window.innerHeight - 80,
-                    behavior: "smooth",
-                });
-            }
-        }
-    })
+        })
+        !window.isMobile && $li.first().addClass('active').find('.right-img').css('width', imgWidth)
+        !window.isMobile &&  $li.mouseenter(function () {
+            $(this).addClass('active').find('.right-img').css('width', imgWidth)
+            $(this).siblings().removeClass('active').find('.right-img').css('width', 0)
+        })
+        window.isMobile && $li.first().addClass('active')
+        window.isMobile &&  $li.mouseenter(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    }();
 </script>
+<!-- 折叠式轮播图js代码 结束 -->
+<!--倾斜动画js代码 开始-->
+<script>
+    Vue.component("photo-card", {
+        template: `<a class="card"
+                :href="link"
+                target="_blank"
+                ref="card"
+                @mousemove="move"
+                @mouseleave="leave"
+                @mouseover="over">
+                  <div class="reflection" ref="refl"></div>
+                  <img :src="img"/>
+            </a>`,
+        props: ["img", "link"],
+        mounted() {},
+        data: () => ({
+            debounce: null }),
 
+        methods: {
+            over() {
+                const refl = this.$refs.refl;
+                refl.style.opacity = 1;
+            },
+            leave() {
+                const card = this.$refs.card;
+                const refl = this.$refs.refl;
+                card.style.transform = `perspective(500px) scale(1)`;
+                refl.style.opacity = 0;
+            },
+
+            move() {
+                const card = this.$refs.card;
+                const refl = this.$refs.refl;
+
+                const relX = (event.offsetX + 1) / card.offsetWidth;
+                const relY = (event.offsetY + 1) / card.offsetHeight;
+                const rotY = `rotateY(${(relX - 0.5) * 60}deg)`;
+                const rotX = `rotateX(${(relY - 0.5) * -60}deg)`;
+                card.style.transform = `perspective(500px) scale(2) ${rotY} ${rotX}`;
+
+                const lightX = this.scale(relX, 0, 1, 150, -50);
+                const lightY = this.scale(relY, 0, 1, 30, -100);
+                const lightConstrain = Math.min(Math.max(relY, 0.3), 0.7);
+                const lightOpacity = this.scale(lightConstrain, 0.3, 1, 1, 0) * 255;
+                const lightShade = `rgba(${lightOpacity}, ${lightOpacity}, ${lightOpacity}, 1)`;
+                const lightShadeBlack = `rgba(0, 0, 0, 1)`;
+                refl.style.backgroundImage = `radial-gradient(circle at ${lightX}% ${lightY}%, ${lightShade} 20%, ${lightShadeBlack})`;
+            },
+            scale: (val, inMin, inMax, outMin, outMax) =>
+                outMin + (val - inMin) * (outMax - outMin) / (inMax - inMin) } });
+
+
+
+    const app = new Vue({
+        el: "#grid" });
+</script>
+<!--倾斜动画js代码 结束-->
+<!--人文景 js代码 开始-->
+<script type="application/x-javascript">
+    addEventListener("load" , function() { setTimeout(hideURLbar,0); },false);function hideURLbar(){ window. scrollTo(0,1);}
+</script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+</script>
+<!--人文景 js代码 结束-->
 </body>
-
 </html>
