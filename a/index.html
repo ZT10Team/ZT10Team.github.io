@@ -1,0 +1,263 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>jQuery图片热点幻灯片播放在线演示</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/jquery.hotspot.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/modernizr.custom.49511.js"></script>
+  <script src="js/jquery.hotspot.min.js"></script>
+
+  <script>
+    jQuery(document).ready(function($) {
+        $('#container1').hotSpot();
+
+        var _pop2 = $('#container2').hotSpot({
+            slideshow : false,
+            triggerBy : 'click',
+            autoHide : false
+        });
+
+        $('#image2').on('click', function(event) {
+            _pop2.hideCurrentPop();
+        });
+    });
+  </script>
+</head>
+<body>
+<div class="container" id="container1">
+  <h2>请移动到原点，就可以看到三江的人文景色以及介绍！</h2>
+  <div class="popover right pop1" data-easein="cardInRight" data-easeout="cardOutRight" id="pop1">
+    <div class="arrow"></div>
+    <div class="popover-inner">
+      <h3 class="popover-title">”三江大学“牌坊、三江牛</h3>
+      <div class="popover-content">
+        <img src="images/flower_small.jpg" alt="small" />
+          <img src="images/map_dxq_face.png" alt="small" />
+      </div>
+    </div>
+  </div>
+
+ <div class="popover right pop2" data-easein="cardInRight" data-easeout="cardOutRight" id="pop2">
+    <div class="arrow"></div>
+    <div class="popover-inner">
+      <h3 class="popover-title"><a href="http://sc.chinaz.com/">香樟树</a></h3>
+      <div class="popover-content">
+          <img src="images/map_dsxq_face.png" alt="small" />
+      </div>
+    </div>
+  </div>
+
+  <div class="popover left pop3" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop3">
+    <div class="arrow"></div>
+    <div class="popover-inner">
+      <h3 class="popover-title">第一教学楼（国际合作与交流处(港澳台办公室)</h3>
+      <div class="popover-content">
+          <img src="images/map_dsxq_face.png" alt="small" />
+          <img src="images/map_dsxq_face.png" alt="small" />
+      </div>
+    </div>
+  </div>
+
+  <div class="popover left pop4" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop4">
+    <div class="arrow"></div>
+    <div class="popover-inner">
+      <h3 class="popover-title">（<a href="https://www.sju.edu.cn/wxyxw/">文学与新闻传播学院</a>、<a href="https://metc.sju.edu.cn/">信息化建设与管理中心</a>）</h3>
+      <div class="popover-content">
+          <img src="images/map_nxq_face.png" alt="small" />
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原名中国语言文学系,创办于1997年，是三江学院最早成立的院系之一；2009年，升格为文学与新闻传播学院。原南京大学中文系主任、著名文艺理论家包忠文教授作为创办人担任首任院长（系主任），现由国家“万人计划”教学名师，国家教材委员会语文学科专家委员会委员周建忠教授担任院长。
+              1张图
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信息化建设与管理中心是负责学校信息化建设与管理工作的直属单位。根据学校的总体部署，执行信息化建设与网络安全领导小组的决议与决策，统筹校园信息化建设规划、实施、管理与服务工作，坚持“以师生为中心”的发展思想，促进信息技术与教学及日常管理的深度融合，努力为全校师生提供学习、教学、科研和管理等信息化公共服务。
+          </p>
+          <img src="images/map_nxq_face.png" alt="small" />
+          <p></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="popover left pop5" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop5">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">体育馆（<a href="https://www.sju.edu.cn/dxtyb/">体育部</a>、<a href="https://www.sju.edu.cn/xsgzb/">学生发展与服务中心</a>）</h3>
+            <div class="popover-content">
+                <img src="images/map_nxq_face.png" alt="small" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;场馆内包含：风雨羽毛球场、乒乓球馆、跆拳道馆、田径场、跆拳道馆、室外篮球场、健身房、羽毛球场、健美操房</p>
+                <img src="images/map_nxq_face.png" alt="small" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三江学院学生发展与服务中心是学校行政职能部门，与党委学生工作部、党委人民武装部、招生办公室合署办公，负责学生教育管理服务、人民武装和招生工作。学生发展与服务中心（党委学生工作部、党委人民武装部、招生办公室）下设学生教育科、学生管理科、学生服务科、就业指导服务科、心理健康咨询与教育科、招生科。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop6">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop8">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop9">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop10">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop11">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop12">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop13">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop14">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop9" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop15">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title">Popover title</h3>
+            <div class="popover-content">
+                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+                    Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover top pop6" data-easein="cardInTop" data-easeout="cardOutTop" id="pop16">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title"><a href="https://www.sju.edu.cn/ysxy/">三江学院南校区（艺术学院、演艺学院）</a></h3>
+            <div class="popover-content">
+                <img src="images/map_nxq_face.png" alt="small" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;艺术学院成立于2002年。2005年办学层次由专科提升为本科，开始全面招收本科层次的艺术类学生。学院秉承“唯实求真、开拓创新”的校训，经过二十年的快速发展，现拥有—视觉传达设计、环境设计、数字媒体艺术、公共艺术、摄影、动画6个专业，其中视觉传达设计、环境设计、动画专业是江苏省一流专业建设点。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;艺术学院根据学校“教学应用型”的办学定位，坚持“技艺相融、特色发展”的建设方向，形成了以应用型学科——设计学为中心，艺术与技术相融合、研究与应用相对应、专业与产业相衔接的学科专业体系，在创新人才培养、实践教学改革、应用课题研究等方面取得了显著的成效。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop7" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop17">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title"><a href="https://www.sju.edu.cn/zcy/">三江学院东校区（高等职业技术学院）</a></h3>
+            <div class="popover-content">
+                <img src="images/map_dxq_face.png" alt="small" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三江学院高等职业技术学院（简称高职院）成立于2002年，位于南京市雨花台区花神大道128号，属三江学院东校区，现面向中等职业学校招收对口单招、“3+4”转段、五年一贯制“专转本”高等职业教育本科学生，经过多年的不断探索形成了多专业的办学格局，理论教学、实践教学、素质教育培养体系臻于完善。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前开设土木工程、机械设计制造及其自动化、机械电子工程、电气工程及其自动化、软件工程、财务管理、市场营销、旅游管理、英语等9个本科专业。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover left pop8" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop18">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <h3 class="popover-title"><a href="https://www.sju.edu.cn/sjxydsgwh/">三江学院东山校区</a></h3>
+            <div class="popover-content">
+                <img src="images/map_dsxq_face.png" alt="small" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三江学院东山校区位于南京市江宁区中水路58号，坐落在美丽的戴安娜湖畔，毗邻双龙大道主干道，交通位置十分便利。2015年8月始，三江学院东山校区开始启用，2020年8月，原东山校区和竹山路校区合并，成立了新的东山校区。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;东山校区为学校二级学院建制，校区综合管理以管委会、党总支为主，与学校各部处条块结合，相互配合，以确保校区各项工作有序运行。东山校区按照学校“三教融合，三院协同”的总 体要求推进书院制试点建设，建有明德书院（南区）和至善书院（北区）两个书院，探索书院制实施模式。</p>
+            </div>
+        </div>
+    </div>
+
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon1" data-target="pop1"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon2" data-target="pop2"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon3" data-target="pop3"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon4" data-target="pop4"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon5" data-target="pop5"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon6" data-target="pop6"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon7" data-target="pop7"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon8" data-target="pop8"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon9" data-target="pop9"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon10" data-target="pop10"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon11" data-target="pop11"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon12" data-target="pop12"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon13" data-target="pop13"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon14" data-target="pop14"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon15" data-target="pop15"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon16" data-target="pop16"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon17" data-target="pop17"  />
+    <img src="images/arrow2.png" alt="info" class="info-icon info-icon18" data-target="pop18"  />
+    <img src="images/sju_map.png" alt="" class="largeimage" width="1400px" height="auto">
+
+</div>
+
+
+
+</body>
+</html>
